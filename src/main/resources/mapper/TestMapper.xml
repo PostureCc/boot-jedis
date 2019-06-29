@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chan.mapper.TestMapper">
+
+	<insert id="insert" parameterType="com.chan.model.vo.UserVo">
+		INSERT INTO t_user(`name`,`age`,`sex`)
+        VALUES(#{name},#{age},#{sex})
+	</insert>
+
+    <select id="find" resultType="com.chan.model.dto.UserDto">
+		SELECT * FROM t_user
+		WHERE `id` = #{id}
+    </select>
+
+</mapper>
